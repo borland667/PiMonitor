@@ -12,9 +12,9 @@ class PMSingleWindow(object):
 	'''
 	
 	def __init__(self, param):
-		self._fg_color = pygame.Color(230, 166, 0)
-		self._fg_color_dim = pygame.Color(200, 140, 0)
-		self._bg_color = pygame.Color(0, 0, 0)
+		self._fg_color = pygame.Color('black')
+		self._fg_color_dim = pygame.Color('blue')
+		self._bg_color = pygame.Color('white')
 		self._param = param
 		self._packets = None
 		

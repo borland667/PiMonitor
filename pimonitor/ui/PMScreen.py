@@ -30,8 +30,8 @@ class PMScreen(object):
 		# seems to suit RPi
 		self._color_depth = 16
 
-		pygame.display.set_mode((0, 0), pygame.FULLSCREEN, self._color_depth)
-		#pygame.display.set_mode((640, 480), 0, self._color_depth)
+		#pygame.display.set_mode((0, 0), pygame.FULLSCREEN, self._color_depth)
+		pygame.display.set_mode((640, 480), 0, self._color_depth)
 		self._surface = pygame.display.get_surface()
 
 		self._clock = pygame.time.Clock()
@@ -44,9 +44,9 @@ class PMScreen(object):
 		self._font_size = int(self._height / 14)
 		self._font = pygame.font.SysFont(pygame.font.get_default_font(), self._font_size)
 		self._font_aa = 0
-		self._fg_color = pygame.Color(255, 191, 0)
-		self._bg_color = pygame.Color(0, 0, 0)
-		self._dim_color = pygame.Color(200, 140, 0)
+		self._fg_color = pygame.Color('black')
+		self._bg_color = pygame.Color('white')
+		self._dim_color = pygame.Color('blue')
 		
 		self._log_lines = 4
 		self._log_msg_id = 0

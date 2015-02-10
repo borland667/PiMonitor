@@ -50,13 +50,13 @@ if __name__ == '__main__':
 		defined_parameters = pickle.load(input)
 		input.close()
 	else:
-		defined_parameters = parser.parse("logger_METRIC_EN_v131.xml")
+		defined_parameters = parser.parse("logger_METRIC_EN_v290.xml")
 		output = open("data/data.pkl", "wb")
 		pickle.dump(defined_parameters, output, -1)
 		output.close()		
 
-	connection = PMConnection()
-	#connection = PMDemoConnection()
+	#connection = PMConnection()
+	connection = PMDemoConnection()
 	while True:
 		try:
 			connection.open()
