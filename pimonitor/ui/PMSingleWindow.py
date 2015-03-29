@@ -65,6 +65,7 @@ class PMSingleWindow(object):
 		self._packets = packets
 		
 	def get_parameter(self):
+        print 'Param: ' + str(self.__param)
 		return self._param
 		
 		

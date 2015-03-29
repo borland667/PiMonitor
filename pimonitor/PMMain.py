@@ -55,8 +55,8 @@ if __name__ == '__main__':
 		pickle.dump(defined_parameters, output, -1)
 		output.close()		
 
-	#connection = PMConnection()
-	connection = PMDemoConnection()
+	connection = PMConnection()
+	#connection = PMDemoConnection()
 	while True:
 		try:
 			connection.open()
@@ -98,7 +98,11 @@ if __name__ == '__main__':
 					supported_parameters.append(p) 					
 				
 			# each ID must be in a form P01 - first letter, then a number
-			supported_parameters.sort(key=lambda p: int(p.get_id()[1:]), reverse=False)
+            # TODO: parse ID values correctly and sort them (new logger definitions)
+
+			supported_parameters.sort(key=lambda p: str(p.get_id()[1:]), reverse=False)
+
+
 			
 			for p in supported_parameters:			
 				window = PMSingleWindow(p)

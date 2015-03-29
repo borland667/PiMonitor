@@ -31769,6 +31769,7 @@ any damage or injury incurred as a result of these definitions. USE AT YOUR OWN 
                 </ecuparam>
             </ecuparams>
         </protocol>
+
         <protocol id="OBD" baud="500000" databits="8" stopbits="1" parity="0" connect_timeout="2000" send_timeout="55">
             <parameters>
                 <parameter id="PID1a" name="MIL Status" desc="PID1a-[0 = Off] | [1 = On]" ecubyteindex="8" ecubit="7" target="3">
